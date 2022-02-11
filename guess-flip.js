@@ -1,5 +1,5 @@
 // Import the coinFlip function from your coin.mjs file
-import { flipACoin } from "./modules/coin.mjs"
+import { coinFlip, flipACoin } from "./modules/coin.mjs"
 import minimist from "minimist"
 import path from "path"
 
@@ -10,7 +10,10 @@ let call = args.call
 let guessFlip = flipACoin(call)
 let validInputs = ["heads", "tails"]
 
-if (validInputs.includes(call.trim())) {
+if (!call) {
+  let randomFlip = coinFlip()
+  console.log(`If you would have guessed ${randomFlip}, you would have won!`)
+} else if (validInputs.includes(call.trim())) {
   console.log(guessFlip)
 } else {
   console.log(
