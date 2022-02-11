@@ -9,8 +9,7 @@ let argNum = args.number
 let manyFlips
 
 if (!argNum) {
-  let i = Math.floor(Math.random() * options.length)
-
+  let i = Math.floor(Math.random() * 200)
   manyFlips = coinFlips(i)
 } else {
   manyFlips = coinFlips(argNum)
