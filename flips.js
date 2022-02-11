@@ -16,5 +16,5 @@ if (!argNum || typeof argNum !== Number) {
 }
 
 let flipCount = countFlips(manyFlips)
-console.log(manyFlips)
-console.log(flipCount)
+process.stdout.write(manyFlips)
+process.stdout.write(flipCount)
