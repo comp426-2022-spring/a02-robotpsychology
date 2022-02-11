@@ -8,7 +8,7 @@ let argNum = args.number
 
 let manyFlips
 
-if (!argNum) {
+if (!argNum || typeof argNum !== Number) {
   let i = Math.floor(Math.random() * 200)
   manyFlips = coinFlips(i)
 } else {
