@@ -13,9 +13,14 @@ let validInputs = ["heads", "tails"]
 if (validInputs.includes(call.trim())) {
   console.log(guessFlip)
 } else {
-  console.log(`Error: no/invalid input.`)
-  console.log(`Usage: node guess-flip --call=${call}`)
-  console.log(`NOTE - Only valid inputs: 
-  [${validInputs}]
-  `)
+  console.log(
+    new Error(
+      `Error: no/invalid input.
+Usage: node guess-flip --call=${call}
+NOTE - Only valid inputs: 
+[${validInputs}]
+`
+    )
+  )
+  process.exit(1)
 }

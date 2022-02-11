@@ -6,7 +6,14 @@ import minimist from "minimist"
 const args = minimist(process.argv.slice(2))
 let argNum = args.number
 
-let manyFlips = coinFlips(argNum)
+let manyFlips
+
+if (!argNum) {
+  manyFlips = coinFlips(1)
+} else {
+  manyFlips = coinFlips(argNum)
+}
+
 let flipCount = countFlips(manyFlips)
 
 console.log(manyFlips)
