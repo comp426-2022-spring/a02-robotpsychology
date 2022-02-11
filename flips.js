@@ -16,6 +16,6 @@ if (!argNum) {
 }
 
 let flipCount = countFlips(manyFlips)
-
+return manyFlips
 console.log(manyFlips)
 console.log(flipCount)
