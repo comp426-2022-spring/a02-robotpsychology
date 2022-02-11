@@ -4,4 +4,4 @@ import { coinFlip } from "./modules/coin.mjs"
 // Call the coinFlip function and put the return into STDOUT
 let singleFlip = coinFlip()
 
-process.stdout.write(singleFlip)
+console.log(singleFlip)
