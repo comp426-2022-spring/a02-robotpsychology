@@ -10,8 +10,9 @@ let call = args.call
 let guessFlip = flipACoin(call)
 let validInputs = ["heads", "tails"]
 
-if (!call) {
+if (!validInputs.includes(call.trim())) {
   let randomFlip = coinFlip()
+  console.log("Error: no/invalid input")
   console.log(`If you would have guessed ${randomFlip}, you would have won!`)
 } else if (validInputs.includes(call.trim())) {
   console.log(guessFlip)
