@@ -15,7 +15,6 @@ if (!argNum || typeof argNum !== Number) {
   manyFlips = coinFlips(argNum)
 }
 
-let manyFlips = coinFlips(argNum)
 let flipCount = countFlips(manyFlips)
 
 console.log(manyFlips)

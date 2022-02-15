@@ -18,6 +18,7 @@ NOTE - Only valid inputs:
 [${validInputs}]
 `
   )
+  process.exit(1)
 } else if (validInputs.includes(call.trim())) {
   console.log(guessFlip)
 }
