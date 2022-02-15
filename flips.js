@@ -6,6 +6,15 @@ import minimist from "minimist"
 const args = minimist(process.argv.slice(2))
 let argNum = args.number
 
+let manyFlips
+
+if (!argNum || typeof argNum !== Number) {
+  let i = Math.floor(Math.random() * 200)
+  manyFlips = coinFlips(i)
+} else {
+  manyFlips = coinFlips(argNum)
+}
+
 let manyFlips = coinFlips(argNum)
 let flipCount = countFlips(manyFlips)
 
