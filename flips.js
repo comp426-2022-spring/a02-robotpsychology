@@ -5,7 +5,6 @@ import minimist from "minimist"
 // Call the coinFlips and countFlips functions and put the returns into STDOUT
 const args = minimist(process.argv.slice(2))
 let argNum = args.number
-
 let manyFlips
 
 if (!argNum || typeof argNum !== Number) {
